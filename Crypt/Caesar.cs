@@ -40,7 +40,7 @@
             return result;
         }
 
-        static public string Decryption(string text, int key)
+        static public string Decrypt(string text, int key)
         {
             string result = "";
 
