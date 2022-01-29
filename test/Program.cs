@@ -1,3 +1,12 @@
-﻿using Graph;
+﻿using Crypt;
 
-Console.WriteLine(Graph.Caesar.Encrypt("Hello world",3));
+namespace test
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine(Caesar.Encrypt("hello world", 2));
+        }
+    }
+}

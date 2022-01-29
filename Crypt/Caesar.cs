@@ -8,50 +8,49 @@ namespace Crypt
 {
     public static class Caesar
     {
-        //enum alphabet
-        //{
-        //    a = 1,
-        //    b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
-        //}
-
+        /// <summary>
+        /// Метод для шифровки текста шифром цезаря
+        /// </summary>
+        /// <param name="text">Текст который надо зашифровать</param>
+        /// <param name="key">Значение сдвига</param>
+        /// <returns></returns>
         static public string Encrypt(string text, int key)
         {
             string result = "";
 
-            int[] t = new int[text.Length];
+            int[] tmp = new int[text.Length];
 
-            int[] b = new int[text.Length];
-
-            _ = text.ToLower();
+            text = text.ToLower();
 
             for (int i = 0; i < text.Length; i++)
             {
                 if (text[i] == ' ') 
-                    t[i] = 0;
+                    tmp[i] = 0;
                 else
-                    t[i] = ((int)text[i] - 96);
+                    tmp[i] = ((int)text[i] - 96);
             }
 
             for (int i = 0; i < text.Length; i++)
             {
-                if ((t[i] + key) > 27)
-                    b[i] = t[i] - 26 + key;
+                if ((tmp[i] + key) > 27)
+                    tmp[i] += key - 26;
 
-                else if (t[i] == 0)
-                    b[i] += ' ';
+                else if (tmp[i] == 0)
+                    tmp[i] += ' ';
 
                 else
-                    b[i] = t[i] + key;
-
+                    tmp[i] += key;
             }
 
             for (int i = 0; i < text.Length; i++)
             {
-                result += (char)(b[i]+96);
-            }
+                if (tmp[i] == ' ')
+                    result += " ";
 
+                else
+                    result += (char)(tmp[i]+96);
+            }
             return result;
         }
-
     }
 }
