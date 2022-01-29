@@ -10,13 +10,7 @@
 
             text = text.ToLower();
 
-            for (int i = 0; i < text.Length; i++)
-            {
-                if (text[i] == ' ') 
-                    tmp[i] = 0;
-                else
-                    tmp[i] = ((int)text[i] - 96);
-            }
+            Cipher.TextToAlph(text, ref tmp);
 
             for (int i = 0; i < text.Length; i++)
             {
@@ -29,13 +23,7 @@
                     tmp[i] += key;
             }
 
-            for (int i = 0; i < text.Length; i++)
-            {
-                if (tmp[i] <= 0)
-                    result += " ";
-                else
-                    result += (char)(tmp[i]+96);
-            }
+            Cipher.AlphToText(tmp, ref result);
 
             return result;
         }
@@ -48,17 +36,10 @@
 
             text = text.ToLower();
 
-            for (int i = 0; i < text.Length; i++)
-            {
-                if (text[i] == ' ')
-                    tmp[i] = 0;
-                else
-                    tmp[i] = ((int)text[i] - 96);
-            }
+            Cipher.TextToAlph(text, ref tmp);
 
             for (int i = 0; i < text.Length; i++)
             {
-
                 if ((tmp[i] - key) < 0)
                     tmp[i] -= key + 26;
                 else if ((tmp[i] - key) > 0)
@@ -67,13 +48,7 @@
                     tmp[i] = 0;
             }
 
-            for (int i = 0; i < text.Length; i++)
-            {
-                if (tmp[i] <= 0)
-                    result += " ";
-                else
-                    result += (char)(tmp[i]+96);
-            }
+            Cipher.AlphToText(tmp, ref result);
             return result;
         }
     }

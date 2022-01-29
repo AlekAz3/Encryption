@@ -8,13 +8,21 @@ namespace Crypt
 {
     public class morse
     {
-        private string[] alphabet = new string[] {"-*", "-***", };
+        private static string[] alphabet = new string[] { "*-", "-***", "-*-*", "-**", "*", "**-*", "--*", "****", "**", "*---", "-*-", "*-**", "--", "-*", "---", "*--*", "--*-", "*-*", "***", "-", "**-", "***-", "*--", "-**-", "-*--", "--**" };
 
         public static string Encrypt(string text)
         {
             string result = "";
+            int[] tmp = new int[text.Length];
+            Cipher.TextToAlph(text, ref tmp);
 
-
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (tmp[i] == 0)
+                    result += "///";
+                else
+                    result += alphabet[tmp[i]+1]+" ";
+            }
 
             return result;
         }
