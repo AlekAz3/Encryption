@@ -7,6 +7,7 @@ namespace test
         static void Main()
         {
             Console.WriteLine(Caesar.Encrypt("hello world", 2));
+            Console.WriteLine(Caesar.Decryption("jgnnq yqtnf", 2));
         }
     }
 }
