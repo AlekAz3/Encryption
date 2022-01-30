@@ -47,7 +47,6 @@
                 else
                     tmp[i] = 0;
             }
-
             Cipher.AlphToText(tmp, ref result);
             return result;
         }

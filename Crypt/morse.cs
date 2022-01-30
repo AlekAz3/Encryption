@@ -28,11 +28,7 @@ namespace Crypt
         }
         public static string Decrypt(string text)
         {
-            string result = "";
-
-
-
-            return result;
+            throw new Exception("Я тупой и не придумал ещё как эту хуйню сделать");
         }
     }
 }
