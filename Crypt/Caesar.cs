@@ -4,7 +4,8 @@
     {
         public string Encrypt(string text, int key)
         {
-
+            if (text == "" || text == " ")
+                throw new ArgumentOutOfRangeException("Пустая строка");
 
             string result = "";
 
@@ -32,6 +33,9 @@
 
         public string Decrypt(string text, int key)
         {
+            if (text == "" || text == " ")
+                throw new ArgumentOutOfRangeException("Пустая строка");
+
             string result = "";
 
             int[] tmp = new int[text.Length];

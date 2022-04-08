@@ -13,6 +13,9 @@ namespace Crypt
 
         public static string Encrypt(string text)
         {
+            if (text == "" || text == " ")
+                throw new ArgumentOutOfRangeException("Пустая строка");
+
             string result = "";
             int[] tmp = new int[text.Length];
             Cipher.TextToAlph(text, ref tmp);
@@ -30,6 +33,10 @@ namespace Crypt
 
         public static string Decrypt(string text)
         {
+            if (text == "" || text == " ")
+                throw new ArgumentOutOfRangeException("Пустая строка");
+            
+
             string result = "";
             text += " ";
             string tmp = "";
@@ -37,12 +44,9 @@ namespace Crypt
             for (int i = 0; i < text.Length; i++)
             {
                 if (text[i] == '*' || text[i] == '-')
-                {
                     tmp += text[i];
-                }
                 else if (text[i] == ' ')
                 {
-
                     int index = Array.IndexOf(morse_alphabet, tmp) -1 ;
                     result +=$"{Cipher.AlphToText(index)}";
                     tmp = "";
