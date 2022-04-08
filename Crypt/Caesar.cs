@@ -1,9 +1,11 @@
 ﻿namespace Crypt
 {
-    public static class Caesar
+    public class Caesar
     {
-        static public string Encrypt(string text, int key)
+        public string Encrypt(string text, int key)
         {
+
+
             string result = "";
 
             int[] tmp = new int[text.Length];
@@ -28,7 +30,7 @@
             return result;
         }
 
-        static public string Decrypt(string text, int key)
+        public string Decrypt(string text, int key)
         {
             string result = "";
 

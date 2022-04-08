@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Crypt
 {
-    public class morse
+    
+    public class Morse
     {
-        private static string[] alphabet = new string[] { "*-", "-***", "-*-*", "-**", "*", "**-*", "--*", "****", "**", "*---", "-*-", "*-**", "--", "-*", "---", "*--*", "--*-", "*-*", "***", "-", "**-", "***-", "*--", "-**-", "-*--", "--**" };
+        private static string[] morse_alphabet = new string[] { "*-", "-***", "-*-*", "-**", "*", "**-*", "--*", "****", "**", "*---", "-*-", "*-**", "--", "-*", "---", "*--*", "--*-", "*-*", "***", "-", "**-", "***-", "*--", "-**-", "-*--", "--**" };
 
         public static string Encrypt(string text)
         {
@@ -19,16 +20,36 @@ namespace Crypt
             for (int i = 0; i < text.Length; i++)
             {
                 if (tmp[i] == 0)
-                    result += "///";
+                    result += " ";
                 else
-                    result += alphabet[tmp[i]+1]+" ";
+                    result += morse_alphabet[tmp[i]+1]+" ";
             }
 
             return result;
         }
+
         public static string Decrypt(string text)
         {
-            throw new Exception("Я тупой и не придумал ещё как эту хуйню сделать");
+            string result = "";
+            text += " ";
+            string tmp = "";
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] == '*' || text[i] == '-')
+                {
+                    tmp += text[i];
+                }
+                else if (text[i] == ' ')
+                {
+
+                    int index = Array.IndexOf(morse_alphabet, tmp) -1 ;
+                    result +=$"{Cipher.AlphToText(index)}";
+                    tmp = "";
+                }
+            }
+
+            return result;
         }
     }
 }

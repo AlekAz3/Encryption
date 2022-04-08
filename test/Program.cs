@@ -6,7 +6,9 @@ namespace test
     {
         static void Main()
         {
-            Console.WriteLine(Crypt.morse.Encrypt("hello world"));
+
+            Console.WriteLine(Morse.Encrypt("hello world"));
+            Console.WriteLine(Morse.Decrypt("*--- --* -* -* --*-  | -*-- --*- - -* **-*"));
         }
     }
 }

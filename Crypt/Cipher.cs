@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Crypt
+﻿namespace Crypt
 {
     static class Cipher
     {
@@ -15,7 +9,7 @@ namespace Crypt
                 if (text[i] == ' ')
                     tmp[i] = 0;
                 else
-                    tmp[i] = ((int)text[i] - 96);
+                    tmp[i] = (text[i] - 96);
             }
         }
 
@@ -29,5 +23,15 @@ namespace Crypt
                     result += (char)(tmp[i] + 96);
             }
         }
+
+
+        public static char AlphToText(int tmp)
+        {
+            if (tmp <= 0)
+                return ' ';
+            else
+                return (char)(tmp + 96);
+        }
+        
     }
 }
