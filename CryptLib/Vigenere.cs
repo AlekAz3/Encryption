@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Crypt
+namespace CryptLib
 {
     public class Vigenere
     {

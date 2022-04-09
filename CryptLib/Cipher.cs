@@ -1,4 +1,4 @@
-﻿namespace Crypt
+﻿namespace CryptLib
 {
     static class Cipher
     {
@@ -17,7 +17,7 @@
         {
             for (int i = 0; i < tmp.Length; i++)
             {
-                if (tmp[i] <= 0)
+                if (tmp[i] == 0)
                     result += " ";
                 else
                     result += (char)(tmp[i] + 96);

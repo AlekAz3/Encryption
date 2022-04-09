@@ -5,9 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{B527C1B6-2C1F-4455-A4F4-5C0032EE1FA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{DBB30002-6991-46B2-87F2-7AAA0D58BA5A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypt", "Crypt\Crypt.csproj", "{4E90B47E-52AA-4BD7-BA4C-C676D5A586B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptLib", "CryptLib\CryptLib.csproj", "{E84E628D-46AA-435C-AFBA-9DACDD5D0551}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +17,10 @@ Global
 		{B527C1B6-2C1F-4455-A4F4-5C0032EE1FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B527C1B6-2C1F-4455-A4F4-5C0032EE1FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B527C1B6-2C1F-4455-A4F4-5C0032EE1FA2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DBB30002-6991-46B2-87F2-7AAA0D58BA5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DBB30002-6991-46B2-87F2-7AAA0D58BA5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DBB30002-6991-46B2-87F2-7AAA0D58BA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DBB30002-6991-46B2-87F2-7AAA0D58BA5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4E90B47E-52AA-4BD7-BA4C-C676D5A586B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E90B47E-52AA-4BD7-BA4C-C676D5A586B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E90B47E-52AA-4BD7-BA4C-C676D5A586B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E90B47E-52AA-4BD7-BA4C-C676D5A586B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E84E628D-46AA-435C-AFBA-9DACDD5D0551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E84E628D-46AA-435C-AFBA-9DACDD5D0551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E84E628D-46AA-435C-AFBA-9DACDD5D0551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E84E628D-46AA-435C-AFBA-9DACDD5D0551}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

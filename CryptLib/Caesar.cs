@@ -1,4 +1,6 @@
-﻿namespace Crypt
+﻿using System;
+
+namespace CryptLib
 {
     public static class Caesar
     {
@@ -46,13 +48,12 @@
 
             for (int i = 0; i < text.Length; i++)
             {
-                if ((tmp[i] - key) < 0)
-                    
+                if (tmp[i] == 0)
+                    tmp[i] = 0;
+                else if ((tmp[i] - key) < 0)
                     tmp[i] += 26 - key;
                 else if ((tmp[i] - key) > 0)
                     tmp[i] -= key;
-                else
-                    tmp[i] = 0;
             }
             Cipher.AlphToText(tmp, ref result);
             return result;

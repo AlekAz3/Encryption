@@ -4,23 +4,23 @@ using System.Runtime.InteropServices;
 
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
-// связанных со сборкой.
-[assembly: AssemblyTitle("Form")]
+// связанные со сборкой.
+[assembly: AssemblyTitle("CryptLib")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Form")]
+[assembly: AssemblyProduct("CryptLib")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
 // для компонентов COM. Если необходимо обратиться к типу в этой сборке через
-// COM, следует установить атрибут ComVisible в TRUE для этого типа.
+// COM, задайте атрибуту ComVisible значение TRUE для этого типа.
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("55a35325-effe-48a0-a1f8-474015e05b10")]
+[assembly: Guid("e84e628d-46aa-435c-afba-9dacdd5d0551")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //
