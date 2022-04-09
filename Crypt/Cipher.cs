@@ -32,6 +32,14 @@
             else
                 return (char)(tmp + 96);
         }
-        
+
+        public static int TextToAlph(char text)
+        {
+            if (text == ' ')
+                return 0;
+            else
+                return (text - 96);
+        }
+
     }
 }

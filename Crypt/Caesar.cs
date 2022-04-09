@@ -1,8 +1,8 @@
 ﻿namespace Crypt
 {
-    public class Caesar
+    public static class Caesar
     {
-        public string Encrypt(string text, int key)
+        public static string Encrypt(string text, int key)
         {
             if (text == "" || text == " ")
                 throw new ArgumentOutOfRangeException("Пустая строка");
@@ -31,7 +31,7 @@
             return result;
         }
 
-        public string Decrypt(string text, int key)
+        public static string Decrypt(string text, int key)
         {
             if (text == "" || text == " ")
                 throw new ArgumentOutOfRangeException("Пустая строка");
@@ -47,7 +47,8 @@
             for (int i = 0; i < text.Length; i++)
             {
                 if ((tmp[i] - key) < 0)
-                    tmp[i] -= key + 26;
+                    
+                    tmp[i] += 26 - key;
                 else if ((tmp[i] - key) > 0)
                     tmp[i] -= key;
                 else

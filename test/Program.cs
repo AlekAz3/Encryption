@@ -7,8 +7,8 @@ namespace test
         static void Main()
         {
 
-            Console.WriteLine(Morse.Encrypt("hello world"));
-            Console.WriteLine(Morse.Decrypt("*--- --* -* -* --*-  | -*-- --*- - -* **-*"));
+            Console.WriteLine(Vigenere.Encrypt("ATTACKATDAWN".ToLower(), "LEMON".ToLower()));
+            Console.WriteLine(Vigenere.Decrypt("LXFOPVEFRNHR".ToLower(), "LEMON".ToLower()));
         }
     }
 }
